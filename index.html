@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kizzy - Discord Rich Presence for Android</title>
   <meta name="description" content="Kizzy - A Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing on Discord!">
-  <meta name="theme-color" content="#5b5ef7">
+  <meta name="theme-color" content="#1a1a1a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script>
     // App download links - update these URLs as needed
     const APP_LINKS = {
@@ -27,17 +27,17 @@
     }
 
     body {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
-      color: white;
-      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fafafa;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
-      overflow-x: hidden;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 24px;
     }
 
     /* Hero Section */
@@ -48,214 +48,184 @@
       justify-content: center;
       min-height: 100vh;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 24px;
     }
 
-    .app-icon {
-      width: 150px;
-      height: 150px;
-      border-radius: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 20px 60px rgba(91, 94, 247, 0.4);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      font-size: 2.5rem;
     }
 
     .app-name {
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #5b5ef7, #a855f7, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 15px;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #fff;
     }
 
     .tagline {
-      font-size: 1.4rem;
-      color: #a0a0b0;
-      margin-bottom: 40px;
-      max-width: 600px;
+      font-size: 1.25rem;
+      color: #888;
+      margin-bottom: 48px;
+      max-width: 500px;
+      font-weight: 400;
     }
 
     .download-btn {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: linear-gradient(135deg, #5b5ef7, #7c3aed);
-      color: white;
-      padding: 18px 40px;
-      border-radius: 50px;
-      font-size: 1.2rem;
+      gap: 10px;
+      background: #fff;
+      color: #0a0a0a;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 1rem;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 40px rgba(91, 94, 247, 0.4);
+      transition: all 0.2s ease;
     }
 
     .download-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 50px rgba(91, 94, 247, 0.5);
+      background: #e5e5e5;
+      transform: translateY(-2px);
     }
 
     .download-btn svg {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
     }
 
     /* Features Section */
     .features {
-      padding: 80px 20px;
+      padding: 120px 0;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
     }
 
     .section-title {
       font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 60px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: #fff;
     }
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 30px;
-      transition: all 0.3s ease;
+      background: #111;
+      border: 1px solid #1a1a1a;
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.2s ease;
     }
 
     .feature-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateY(-5px);
-      border-color: rgba(91, 94, 247, 0.5);
+      border-color: #333;
+      background: #151515;
     }
 
     .feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+      width: 48px;
+      height: 48px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
 
     .feature-title {
-      font-size: 1.3rem;
+      font-size: 1.125rem;
       font-weight: 600;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       color: #fff;
     }
 
     .feature-desc {
-      color: #a0a0b0;
-      line-height: 1.6;
+      color: #666;
+      font-size: 0.9375rem;
     }
 
-    /* Screenshots Section */
-    .screenshots {
-      padding: 80px 20px;
-      overflow: hidden;
+    /* Info Section */
+    .info {
+      padding: 120px 0;
+      border-top: 1px solid #1a1a1a;
     }
 
-    .screenshots-scroll {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      padding: 20px 0;
-      scroll-snap-type: x mandatory;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar-track {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-    }
-
-    .screenshots-scroll::-webkit-scrollbar-thumb {
-      background: #5b5ef7;
-      border-radius: 4px;
-    }
-
-    .screenshot {
-      flex-shrink: 0;
-      width: 250px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      scroll-snap-align: center;
-    }
-
-    /* Requirements Section */
-    .requirements {
-      padding: 80px 20px;
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
       text-align: center;
     }
 
-    .requirements-box {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 40px;
-      max-width: 600px;
-      margin: 0 auto;
+    .info-item h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
     }
 
-    .requirements-list {
-      list-style: none;
-      text-align: left;
-    }
-
-    .requirements-list li {
-      padding: 12px 0;
-      color: #a0a0b0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .requirements-list li::before {
-      content: "✓";
-      color: #5b5ef7;
-      font-weight: bold;
+    .info-item p {
+      color: #666;
+      font-size: 0.9375rem;
     }
 
     /* Footer */
     .footer {
       text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 48px 24px;
+      border-top: 1px solid #1a1a1a;
     }
 
     .footer-links {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 24px;
     }
 
     .footer-links a {
-      color: #a0a0b0;
+      color: #666;
       text-decoration: none;
-      transition: color 0.3s ease;
+      font-size: 0.9375rem;
+      transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
-      color: #5b5ef7;
+      color: #fff;
     }
 
     .copyright {
-      color: #666;
-      font-size: 0.9rem;
+      color: #444;
+      font-size: 0.875rem;
     }
 
     /* Responsive */
@@ -272,8 +242,13 @@
         font-size: 2rem;
       }
 
-      .screenshot {
-        width: 200px;
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
     }
   </style>
@@ -281,76 +256,66 @@
 <body>
   <!-- Hero Section -->
   <section class="hero">
-    <img src="https://user-images.githubusercontent.com/68665948/207296272-d1985003-1681-4df4-b8ea-ca71f2043f89.png" alt="Kizzy App Icon" class="app-icon">
+    <div class="logo">🎮</div>
     <h1 class="app-name">Kizzy</h1>
-    <p class="tagline">A Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing!</p>
+    <p class="tagline">Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing.</p>
     <a href="https://github.com/dead8309/Kizzy/releases/latest" class="download-btn" id="downloadBtn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
-      Download Now
+      Download
     </a>
   </section>
 
   <!-- Features Section -->
-  <section class="features container">
-    <h2 class="section-title">Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🎮</div>
-        <h3 class="feature-title">App Detection</h3>
-        <p class="feature-desc">Automatically detects your current running app and shows it on Discord.</p>
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Features</p>
+        <h2 class="section-title">Everything you need</h2>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎵</div>
-        <h3 class="feature-title">Media Detection</h3>
-        <p class="feature-desc">Shows what music or media you're currently playing.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <h3 class="feature-title">Custom Status</h3>
-        <p class="feature-desc">Create fully customized Rich Presence with your own images and links.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💾</div>
-        <h3 class="feature-title">Save Configs</h3>
-        <p class="feature-desc">Save and load your favorite presence configurations easily.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌈</div>
-        <h3 class="feature-title">Material You</h3>
-        <p class="feature-desc">Beautiful Material You theme that adapts to your device.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🖼️</div>
-        <h3 class="feature-title">GIF Support</h3>
-        <p class="feature-desc">Use animated GIFs and external URLs for your presence images.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">App Detection</h3>
+          <p class="feature-desc">Automatically detects and displays your current app on Discord.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎵</div>
+          <h3 class="feature-title">Media Detection</h3>
+          <p class="feature-desc">Shows what music or media you're currently playing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✏️</div>
+          <h3 class="feature-title">Custom Status</h3>
+          <p class="feature-desc">Create custom Rich Presence with your own images and links.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💾</div>
+          <h3 class="feature-title">Save Configs</h3>
+          <p class="feature-desc">Save and load your favorite presence configurations.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Screenshots Section -->
-  <section class="screenshots container">
-    <h2 class="section-title">Screenshots</h2>
-    <div class="screenshots-scroll">
-      <img src="https://user-images.githubusercontent.com/68665948/207300844-a6177a86-250b-4d2e-b21b-b6bdb431a414.png" alt="Screenshot 1" class="screenshot">
-      <img src="https://user-images.githubusercontent.com/68665948/207301097-f83b31d0-26f7-4e1e-8e77-bd16bfdd0eda.png" alt="Screenshot 2" class="screenshot">
-      <img src="https://user-images.githubusercontent.com/68665948/207301272-9e40dae9-9fd5-4c41-894f-0d5da1ccbe1e.png" alt="Screenshot 3" class="screenshot">
-      <img src="https://user-images.githubusercontent.com/68665948/207301298-e82d934d-4ca2-4d52-ae21-9d54cf66e353.png" alt="Screenshot 4" class="screenshot">
-      <img src="https://user-images.githubusercontent.com/68665948/207301309-f4a23b58-c687-44c4-8506-695ed5c0ff5d.png" alt="Screenshot 5" class="screenshot">
-      <img src="https://user-images.githubusercontent.com/68665948/207301334-f923ac6e-9d75-4280-a820-e5397fcf0d5a.png" alt="Screenshot 6" class="screenshot">
-    </div>
-  </section>
-
-  <!-- Requirements Section -->
-  <section class="requirements">
-    <h2 class="section-title">System Requirements</h2>
-    <div class="requirements-box">
-      <ul class="requirements-list">
-        <li>Android 8.1 through 14</li>
-        <li>Minimum 3GB RAM</li>
-        <li>Discord account</li>
-      </ul>
+  <!-- Info Section -->
+  <section class="info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-item">
+          <h3>Android 8.1+</h3>
+          <p>Minimum OS version</p>
+        </div>
+        <div class="info-item">
+          <h3>300+</h3>
+          <p>Predefined presets</p>
+        </div>
+        <div class="info-item">
+          <h3>Open Source</h3>
+          <p>GNU GPL 3.0</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -359,9 +324,9 @@
     <div class="footer-links">
       <a href="https://github.com/dead8309/Kizzy" target="_blank">GitHub</a>
       <a href="https://discord.gg/vUPc7zzpV5" target="_blank">Discord</a>
-      <a href="https://kizzydocs.vercel.app" target="_blank">Documentation</a>
+      <a href="https://kizzydocs.vercel.app" target="_blank">Docs</a>
     </div>
-    <p class="copyright">&copy; <span id="year"></span> Kizzy. Open source under GNU GPL 3.0</p>
+    <p class="copyright">&copy; <span id="year"></span> Kizzy</p>
   </footer>
 
   <script>
