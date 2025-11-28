@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kizzy - Discord Rich Presence for Android</title>
-  <meta name="description" content="Kizzy - A Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing on Discord!">
+  <title>NeroxStatus - Discord Rich Presence for Android</title>
+  <meta name="description" content="NeroxStatus - A Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing on Discord!">
   <meta name="theme-color" content="#1a1a1a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,8 @@
   <script>
     // App download links - update these URLs as needed
     const APP_LINKS = {
-      kizzy: {
-        name: "Kizzy",
+      neroxstatus: {
+        name: "NeroxStatus",
         downloadUrl: "https://github.com/dead8309/Kizzy/releases/latest",
         description: "Discord Rich Presence for Android"
       }
@@ -74,9 +74,25 @@
     .tagline {
       font-size: 1.25rem;
       color: #888;
-      margin-bottom: 48px;
+      margin-bottom: 16px;
       max-width: 500px;
       font-weight: 400;
+    }
+
+    .app-url {
+      margin-bottom: 48px;
+    }
+
+    .app-url a {
+      color: #5865F2;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .app-url a:hover {
+      color: #7289da;
+      text-decoration: underline;
     }
 
     .download-btn {
@@ -257,8 +273,9 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="logo">🎮</div>
-    <h1 class="app-name">Kizzy</h1>
+    <h1 class="app-name">NeroxStatus</h1>
     <p class="tagline">Discord Rich Presence manager for Android. Show what you're playing, listening to, or doing.</p>
+    <p class="app-url"><a href="https://tanmayyy.me/app" target="_blank">tanmayyy.me/app</a></p>
     <a href="https://github.com/dead8309/Kizzy/releases/latest" class="download-btn" id="downloadBtn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -326,12 +343,12 @@
       <a href="https://discord.gg/vUPc7zzpV5" target="_blank">Discord</a>
       <a href="https://kizzydocs.vercel.app" target="_blank">Docs</a>
     </div>
-    <p class="copyright">&copy; <span id="year"></span> Kizzy</p>
+    <p class="copyright">&copy; <span id="year"></span> NeroxStatus | Made by <a href="https://tanmayyy.me" target="_blank" style="color: #5865F2; text-decoration: none;">Tanmay</a></p>
   </footer>
 
   <script>
     // Set download link from APP_LINKS
-    document.getElementById('downloadBtn').href = APP_LINKS.kizzy.downloadUrl;
+    document.getElementById('downloadBtn').href = APP_LINKS.neroxstatus.downloadUrl;
     // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
